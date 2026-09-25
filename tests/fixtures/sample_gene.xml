@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Trimmed excerpt of real data retrieved from https://www.proteinatlas.org/ENSG00000163207.xml
+(gene IVL, HPA version 25) during the HPA data-source investigation on 2026-09-25.
+Only the elements relevant to Cervix IHC parsing are kept; everything else
+(other tissues, cancerExpression, rnaExpression, ...) was removed for test
+readability. Values themselves are unmodified real HPA data.
+-->
+<proteinAtlas schemaVersion="3.1">
+    <entry version="25" url="https://v25.proteinatlas.org/ENSG00000163207">
+        <name>IVL</name>
+        <identifier id="ENSG00000163207" db="Ensembl" version="109" assembly="GRCh38.p13" gencodeVersion="43"/>
+        <antibody id="CAB002243" releaseVersion="1.2" releaseDate="2006-03-13">
+            <tissueExpression source="HPA" technology="IHC" assayType="tissue">
+                <summary type="tissue">Detected in some</summary>
+                <data>
+                    <tissue organ="Female tissues" ontologyTerms="UBERON:0000002">Cervix</tissue>
+                    <tissueCell>
+                        <cellType>Glandular cells</cellType>
+                        <level type="staining">not detected</level>
+                        <level type="intensity">negative</level>
+                        <quantity>none</quantity>
+                        <location>none</location>
+                    </tissueCell>
+                    <tissueCell>
+                        <cellType>Squamous epithelial cells</cellType>
+                        <level type="staining">high</level>
+                        <level type="intensity">strong</level>
+                        <quantity>&gt;75%</quantity>
+                        <location>cytoplasmic/membranous</location>
+                    </tissueCell>
+                    <patient>
+                        <sex>Female</sex>
+                        <age>46</age>
+                        <patientId>1895</patientId>
+                        <sample>
+                            <snomedParameters>
+                                <snomed tissueDescription="Normal tissue, NOS" snomedCode="M-00100"/>
+                                <snomed tissueDescription="Cervix" snomedCode="T-83000"/>
+                            </snomedParameters>
+                            <assayImage>
+                                <image imageType="sampleImage">
+                                    <imageUrl>https://images.proteinatlas.org/2243/6008_B_9_3.jpg</imageUrl>
+                                    <imageUrlTif>https://images.proteinatlas.org/2243/6008_B_9_3.tif</imageUrlTif>
+                                </image>
+                            </assayImage>
+                        </sample>
+                    </patient>
+                    <patient>
+                        <sex>Female</sex>
+                        <age>55</age>
+                        <patientId>2005</patientId>
+                        <sample>
+                            <snomedParameters>
+                                <snomed tissueDescription="Normal tissue, NOS" snomedCode="M-00100"/>
+                                <snomed tissueDescription="Cervix" snomedCode="T-83000"/>
+                            </snomedParameters>
+                            <assayImage>
+                                <image imageType="sampleImage">
+                                    <imageUrl>https://images.proteinatlas.org/2243/6008_B_7_3.jpg</imageUrl>
+                                    <imageUrlTif>https://images.proteinatlas.org/2243/6008_B_7_3.tif</imageUrlTif>
+                                </image>
+                            </assayImage>
+                        </sample>
+                    </patient>
+                </data>
+                <data>
+                    <tissue organ="Gastrointestinal tract" ontologyTerms="UBERON:0001155">Colon</tissue>
+                    <tissueCell>
+                        <cellType>Glandular cells</cellType>
+                        <level type="staining">not detected</level>
+                        <level type="intensity">negative</level>
+                        <quantity>none</quantity>
+                        <location>none</location>
+                    </tissueCell>
+                    <patient>
+                        <sex>Female</sex>
+                        <age>61</age>
+                        <patientId>1832</patientId>
+                        <sample>
+                            <snomedParameters>
+                                <snomed tissueDescription="Normal tissue, NOS" snomedCode="M-00100"/>
+                                <snomed tissueDescription="Colon" snomedCode="T-67000"/>
+                            </snomedParameters>
+                            <assayImage>
+                                <image imageType="sampleImage">
+                                    <imageUrl>https://images.proteinatlas.org/2243/6008_A_9_3.jpg</imageUrl>
+                                    <imageUrlTif>https://images.proteinatlas.org/2243/6008_A_9_3.tif</imageUrlTif>
+                                </image>
+                            </assayImage>
+                        </sample>
+                    </patient>
+                </data>
+            </tissueExpression>
+        </antibody>
+    </entry>
+    <copyright>Data from proteinatlas.org, used here as a test fixture (research/educational use).</copyright>
+</proteinAtlas>
