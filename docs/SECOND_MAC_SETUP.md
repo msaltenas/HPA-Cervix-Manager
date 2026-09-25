@@ -22,15 +22,39 @@ aus), per Homebrew nachinstallieren:
 brew install python@3.12
 ```
 
-## 2. Repository klonen
+## 2. Repository herunterladen
+
+**Variante A — ohne Git, per Browser-Download (empfohlen, kein GitHub-Login im Terminal nötig):**
+
+Im Browser (dort eingeloggt) zu `https://github.com/Infoeasy12/HPA-Cervix-Manager`
+gehen, grünen **"Code"**-Button → **"Download ZIP"** klicken. Dann im Terminal:
+
+```bash
+cd ~/Downloads
+ls
+```
+
+Schau nach, wie der entpackte Ordner heißt (meist automatisch entpackt,
+z. B. `HPA-Cervix-Manager-main`), dann:
+
+```bash
+mv ~/Downloads/HPA-Cervix-Manager-main ~/HPA-Cervix-Manager
+cd ~/HPA-Cervix-Manager
+```
+
+**Variante B — per Git** (falls du lieber `git pull` für spätere Updates
+willst; braucht einen GitHub Personal Access Token, siehe unten):
 
 ```bash
 git clone https://github.com/Infoeasy12/HPA-Cervix-Manager.git
 cd HPA-Cervix-Manager
 ```
 
-(Privates Repo — beim Klonen wird nach GitHub-Login gefragt; falls die
-GitHub-CLI installiert ist, vorher `gh auth login` ausführen.)
+Falls dabei "Authentication failed" kommt: Im Browser zu
+`https://github.com/settings/tokens/new`, Scope **`repo`** ankreuzen,
+Token generieren und kopieren. Beim `git clone`-Login dann als Username
+`Infoeasy12` und als Passwort den kopierten Token (nicht das GitHub-Passwort)
+eingeben.
 
 ## 3. Virtuelle Umgebung + Abhängigkeiten installieren
 
@@ -110,8 +134,11 @@ for row in conn.execute('SELECT download_status, COUNT(*) FROM images GROUP BY d
 ## Kurzfassung (wenn alles schon mal lief und nur fortgesetzt werden soll)
 
 ```bash
-cd HPA-Cervix-Manager
-git pull
+cd ~/HPA-Cervix-Manager
 source .venv/bin/activate
 python scripts/download_pending_images.py --data-dir /Users/DEINNAME/HPA_Cervix --workers 2
 ```
+
+(Nur bei Variante B zusätzlich vorher `git pull`, um neuen Code zu holen —
+bei der ZIP-Variante A stattdessen bei Bedarf erneut "Download ZIP" machen
+und den alten Ordner ersetzen.)
