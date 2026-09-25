@@ -82,7 +82,9 @@ per-gene fetching), real measured numbers, and the multi-Mac workflow.
 
 **Setting up the second Mac that will actually download the images?**
 Follow `docs/SECOND_MAC_SETUP.md` — a step-by-step runbook (clone, venv,
-copy over the metadata DB, run the download script).
+copy over the metadata DB, run the download script). Prefer to have an
+assistant walk you through it on that machine? Copy the prompt in
+`docs/CHATGPT_SETUP_PROMPT.md`.
 
 ## Data source
 
