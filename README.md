@@ -80,6 +80,10 @@ python scripts/download_pending_images.py --data-dir /path/to/HPA_Cervix --worke
 See `docs/MASS_DOWNLOAD.md` for the architecture decision (bulk export vs.
 per-gene fetching), real measured numbers, and the multi-Mac workflow.
 
+**Setting up the second Mac that will actually download the images?**
+Follow `docs/SECOND_MAC_SETUP.md` — a step-by-step runbook (clone, venv,
+copy over the metadata DB, run the download script).
+
 ## Data source
 
 See `docs/HPA_DATA_SOURCE.md` for the full investigation of HPA's official
